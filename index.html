@@ -36,36 +36,6 @@
                 </div>
         </div>
     </nav>
-<span style="float="center";>
-    <div class="container"> 
-        <form> 
-            <label>Choose your Food:</label> 
-            <select class="form-select" id="meal"> 
-            <option value="none"> Select</option> 
-            <option value="250"> Meal A</option> 
-            <option value="300"> Meal B </option> 
-            </select> 
-<br> 
-            <label>Discount?</label> 
-            <select class="form-select" id="discount"> 
-            <option value="none"> Select</option> 
-            <option value="0.2"> PWD/SC/STUDENT </option> 
-            <option value="0"> Regular </option> 
-            </select>
-<br> 
-            <button type="button" onclick="check_discount()" class="btn btn-danger"> Meal Price </button> 
-        </form> 
-    </div> 
 
-    <script>
-       function check_discount() { 
-        var meal1 = document.getElementById ('meal').value; 
-        var disc1 = document.getElementById('discount').value; 
-        var final_rate = meal1 - (disc1* meal1);  
-        
-        window.alert('Your meal price is' + ' ' + final_rate);
-        }  
-    </script>
-</span>
 </body>
 </html>
