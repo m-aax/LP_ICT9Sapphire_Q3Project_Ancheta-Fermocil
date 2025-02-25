@@ -12,7 +12,8 @@
     <style>
 
         body{
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: antiquewhite;
         }
         .center-header {
             text-align: center;
@@ -53,6 +54,32 @@
             background-color: white; 
             color: black; 
         }
+        
+        
+        #Rate {
+            text-align: center;
+            color: white;
+            background-color: black;
+            padding: 5px;
+            width: 25%;
+            margin: 25px auto;
+            float: right;
+
+        }
+
+        #forms{
+            margin: auto;
+            padding: 15px;
+            float: center;
+            justify-content: center;
+        }
+
+        .row{
+            flex: 25%;
+            padding: 25px;
+            float: center;
+        }
+        
     </style>
 
 </head>
@@ -93,7 +120,9 @@
 
     <div class="d-flex align-items-center">
         <img src="Screenshot 2025-02-24 203202.png" class="ms-3 me-3"> 
-        <div class="text-center">
+
+        <!--Forms-->
+        <div class="text-center" id="forms">
             <form> 
                 <label id="Leaving" class="mb-3">Leaving From:</label>
                 <select class="form-control custom-select mb-3" id="seat">
@@ -126,8 +155,27 @@
                     <option> Recto </option> 
                 </select>
             </form>
+            
+            <div class="row">
+                <div class="row">
+                    <button type="button" class="btn btn-warning">Regular Fare</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-warning">Discounted Fare</button>
+                </div>
+            </div>
+
+
         </div>
+        <div id="Rate">
+            <h1>Your Ticket Rate: </h1>
+            <!---display for the funcitons go here-->
+
+        </div>
+    
     </div>
+
+    
 
 </body>
 </html>
