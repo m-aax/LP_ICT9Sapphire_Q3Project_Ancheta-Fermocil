@@ -41,13 +41,17 @@
             color: white;
             background-color: black;
             padding: 15px;
-            width: fit-content;
-            margin: auto;
+            width: 100%;
+            margin: 25px auto;
             font-size: 1.5rem;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .form-control.custom-select {
-            background-color: cyan; 
+            background-color: rgb(177, 255, 255); 
         }
 
         .form-control.custom-select option {
@@ -55,16 +59,18 @@
             color: black; 
         }
         
-        
         #Rate {
             text-align: center;
             color: white;
             background-color: black;
-            padding: 5px;
-            width: 25%;
+            padding: 15px;
+            width: fit-content;
             margin: 25px auto;
             float: right;
-
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #forms{
@@ -79,6 +85,20 @@
             padding: 25px;
             float: center;
         }
+
+        #regular-fare-btn {
+            color: green;
+            border: 1px solid green;
+            background-color: antiquewhite;
+            margin-top: 10px; 
+        }
+
+        #discounted-fare-btn {
+            margin-top: 10px; 
+            color: blue;
+            border: 1px solid blue;
+            background-color: antiquewhite;
+        }
         
     </style>
 
@@ -91,13 +111,14 @@
             <!-- Brand Logo -->
             <div class="container-fluid">
                 <a class="navbar-brand rounded-circle" href="#"><img src="360_F_432542454_kfzQHjWPgdi4sx9EfXqOLPzSXFiJBf8l-removebg-preview.png" height="50px" width="50px" class="rounded-circle"></a>
-                
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
                 <!-- Add links -->
-                    <div class="collapse navbar-collapse">
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     
                         <!-- me-auto adjust pushes the search bar to the right -->
                         <ul class="navbar-nav me-auto">
@@ -162,10 +183,10 @@
             
             <div class="row">
                 <div class="row">
-                    <button type="button" class="btn btn-warning">Regular Fare</button>
+                    <button type="button" id="regular-fare-btn" class="btn" onclick="sum()">Regular Fare</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="btn btn-warning">Discounted Fare</button>
+                    <button type="button" id="discounted-fare-btn" class="btn">Discounted Fare</button>
                 </div>
             </div>
 
