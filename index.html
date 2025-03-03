@@ -138,35 +138,35 @@
             <div class="col text-center" id="forms">
                 <form> 
                     <label id="Leaving" class="mb-3">Leaving From:</label>
-                    <select class="form-control custom-select mb-3" id="from">
-                        <option value="none"> Select </option> 
-                        <option value="13"> Santolan </option> 
-                        <option value="14"> Katipunan </option>
-                        <option value="15"> Anonas </option>
-                        <option value="16"> Arenata Center - Cubao </option>
-                        <option value="17"> Betty Go-Belmonte </option>
-                        <option value="18"> Gilmore </option>
-                        <option value="19"> J. Ruiz </option>
-                        <option value="20"> V. Mapa </option>
-                        <option value="21"> Pureza </option>
-                        <option value="22"> Legarda </option>
-                        <option value="23"> Recto </option> 
-                    </select>
-                    <label id="Leaving" class="mb-3 mt-3">Going To:</label>
-                    <select class="form-control custom-select" id="to">
-                        <option value="none"> Select </option> 
-                        <option value="13"> Santolan </option> 
-                        <option value="14"> Katipunan </option>
-                        <option value="15"> Anonas </option>
-                        <option value="16"> Araneta Center - Cubao </option>
-                        <option value="17"> Betty Go-Belmonte </option>
-                        <option value="18"> Gilmore </option>
-                        <option value="19"> J. Ruiz </option>
-                        <option value="20"> V. Mapa </option>
-                        <option value="21"> Pureza </option>
-                        <option value="22"> Legarda </option>
-                        <option value="23"> Recto </option> 
-                    </select>
+                        <select class="form-control custom-select mb-3" id="from">
+                            <option value="none"> Select </option> 
+                            <option value="13"> Santolan </option> 
+                            <option value="14"> Katipunan </option>
+                            <option value="15"> Anonas </option>
+                            <option value="16"> Arenata Center - Cubao </option>
+                            <option value="17"> Betty Go-Belmonte </option>
+                            <option value="18"> Gilmore </option>
+                            <option value="19"> J. Ruiz </option>
+                            <option value="20"> V. Mapa </option>
+                            <option value="21"> Pureza </option>
+                            <option value="22"> Legarda </option>
+                            <option value="23"> Recto </option> 
+                        </select>
+                        <label id="Leaving" class="mb-3 mt-3">Going To:</label>
+                        <select class="form-control custom-select" id="to">
+                            <option value="none"> Select </option> 
+                            <option value="13"> Santolan </option> 
+                            <option value="14"> Katipunan </option>
+                            <option value="15"> Anonas </option>
+                            <option value="16"> Araneta Center - Cubao </option>
+                            <option value="17"> Betty Go-Belmonte </option>
+                            <option value="18"> Gilmore </option>
+                            <option value="19"> J. Ruiz </option>
+                            <option value="20"> V. Mapa </option>
+                            <option value="21"> Pureza </option>
+                            <option value="22"> Legarda </option>
+                            <option value="23"> Recto </option> 
+                        </select>
                 </form>
 
                 <script>
@@ -188,7 +188,7 @@
                     var tofrom = Number(add1) + Number(add2);
                     var sum = tofrom - (disc2* tofrom)
 
-                    document.getElementById('result').innerHTML= 'Your Ticket Rate:' + ' ' + sum;
+                    document.getElementById('result').innerHTML= 'Your Ticket Rate:' + ' ' + sum + '₱';
                     }
                     
                 </script>
@@ -221,6 +221,8 @@
                 </script>
                     
                     <button type="button" id="discounted-fare-btn" class="btn" onclick="check_discount()" value=".2">Discounted Fare</button>
+                <br>
+                <img src="mrt-traincard-removebg-preview.png" alt="train card">
             </div>
             <div class="col text-center">
                 <div id="result">
