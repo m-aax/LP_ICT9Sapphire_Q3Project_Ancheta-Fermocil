@@ -25,9 +25,9 @@
         }
 
         .space-left {
+            padding-left: 25px;
+            padding-right: 5px;
             margin: 25px auto;
-            padding: 15px;
-            float: left;
         }
 
         .form-container {
@@ -37,7 +37,7 @@
             margin-top: 20px;
         }
         
-        #Leaving {
+        #Leaving, #result {
             color: white;
             background-color: black;
             padding: 15px;
@@ -58,32 +58,18 @@
             background-color: white; 
             color: black; 
         }
-        
-        #Rate {
-            text-align: center;
-            color: white;
-            background-color: black;
-            padding: 15px;
-            width: fit-content;
-            margin: 25px auto;
-            float: right;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
 
-        #forms{
+        #forms {
             margin: auto;
             padding: 15px;
-            float: center;
             justify-content: center;
+            text-align: center;
         }
 
-        .row{
+        .row {
             flex: 25%;
-            padding: 25px;
-            float: center;
+            padding: 10px;
+            justify-content: center;
         }
 
         #regular-fare-btn {
@@ -111,16 +97,15 @@
             <!-- Brand Logo -->
             <div class="container-fluid">
                 <a class="navbar-brand rounded-circle" href="#"><img src="360_F_432542454_kfzQHjWPgdi4sx9EfXqOLPzSXFiJBf8l-removebg-preview.png" height="50px" width="50px" class="rounded-circle"></a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <!-- Add links -->
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     
-                        <!-- me-auto adjust pushes the search bar to the right -->
+                       <!-- me-auto adjust pushes the search bar to the right -->
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
                             <li class="nav-item"> <a class="nav-link" href="page2.html">Train Schedule</a> </li>
@@ -143,64 +128,100 @@
         <h1 class="center-header">Fare Guide (LRT Line 2)</h1>
     </div>
 
-    <div class="d-flex align-items-center">
-        <img src="Screenshot 2025-02-24 203202.png" class="ms-3 me-3"> 
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <img src="Screenshot 2025-02-24 203202.png" class="img-fluid mb-3"> 
+            </div>
+            <div class="col text-center" id="forms">
+                <form> 
+                    <label id="Leaving" class="mb-3">Leaving From:</label>
+                    <select class="form-control custom-select mb-3" id="from">
+                        <option value="none"> Select </option> 
+                        <option value="13"> Santolan </option> 
+                        <option value="14"> Katipunan </option>
+                        <option value="15"> Anonas </option>
+                        <option value="16"> Arenata Center - Cubao </option>
+                        <option value="17"> Betty Go-Belmonte </option>
+                        <option value="18"> Gilmore </option>
+                        <option value="19"> J. Ruiz </option>
+                        <option value="20"> V. Mapa </option>
+                        <option value="21"> Pureza </option>
+                        <option value="22"> Legarda </option>
+                        <option value="23"> Recto </option> 
+                    </select>
+                    <label id="Leaving" class="mb-3 mt-3">Going To:</label>
+                    <select class="form-control custom-select" id="to">
+                        <option value="none"> Select </option> 
+                        <option value="13"> Santolan </option> 
+                        <option value="14"> Katipunan </option>
+                        <option value="15"> Anonas </option>
+                        <option value="16"> Araneta Center - Cubao </option>
+                        <option value="17"> Betty Go-Belmonte </option>
+                        <option value="18"> Gilmore </option>
+                        <option value="19"> J. Ruiz </option>
+                        <option value="20"> V. Mapa </option>
+                        <option value="21"> Pureza </option>
+                        <option value="22"> Legarda </option>
+                        <option value="23"> Recto </option> 
+                    </select>
+                </form>
 
-        <!--Forms-->
-        <div class="text-center" id="forms">
-            <form> 
-                <label id="Leaving" class="mb-3">Leaving From:</label>
-                <select class="form-control custom-select mb-3" id="seat">
-                    <option value="none"> Select </option> 
-                    <option> Santolan </option> 
-                    <option> Katipunan </option>
-                    <option> Anonas </option>
-                    <option> Arenata Center - Cubao </option>
-                    <option> Betty Go-Belmonte </option>
-                    <option> Gilmore </option>
-                    <option> J. Ruiz </option>
-                    <option> V. Mapa </option>
-                    <option> Pureza </option>
-                    <option> Legarda </option>
-                    <option> Recto </option> 
-                </select>
-                <label id="Leaving" class="mb-3 mt-3">Going To:</label>
-                <select class="form-control custom-select" id="seat">
-                    <option value="none"> Select </option> 
-                    <option> Santolan </option> 
-                    <option> Katipunan </option>
-                    <option> Anonas </option>
-                    <option> Araneta Center - Cubao </option>
-                    <option> Betty Go-Belmonte </option>
-                    <option> Gilmore </option>
-                    <option> J. Ruiz </option>
-                    <option> V. Mapa </option>
-                    <option> Pureza </option>
-                    <option> Legarda </option>
-                    <option> Recto </option> 
-                </select>
-            </form>
-            
-            <div class="row">
-                <div class="row">
-                    <button type="button" id="regular-fare-btn" class="btn" onclick="sum()">Regular Fare</button>
-                </div>
-                <div class="row">
-                    <button type="button" id="discounted-fare-btn" class="btn">Discounted Fare</button>
+                <script>
+                    function sum() {
+                    var add1 = document.getElementById("from").value; 
+                    var add2 = document.getElementById("to").value;
+                    var disc2 = document.getElementById("regular-fare-btn").value;
+                
+                        if (add1 == "none" || add2 == "none") {
+                            alert("Please select a station");
+                        }
+
+                        if (add1 == add2) {
+                            alert("Please select different stations");
+                        }
+
+                    var tofrom = Number(add1) + Number(add2);
+                    var sum = tofrom - (disc2* tofrom)
+
+                    document.getElementById('result').innerHTML= 'Your Ticket Rate:' + ' ' + sum;
+                    }
+                    
+                </script>
+
+                    <button type="button" id="regular-fare-btn" class="btn" onclick="sum()" value="0">Regular Fare</button>
+
+                <script>
+                    function check_discount() {
+                    var from1 = document.getElementById("from").value; 
+                    var to1 = document.getElementById("to").value;
+                    disc2 = document.getElementById("discounted-fare-btn").value;
+
+                        if (from1 == "none" || to1 == "none") {
+                            alert("Please select a station");
+                        }
+
+                        if (from1 == to1) {
+                            alert("Please select different stations");
+                        }
+
+                    var fromto = Number(from1) + Number(to1);
+                    var final_rate = fromto - (disc2* fromto);    
+
+                    document.getElementById('result').innerHTML= 'Your Ticket Rate:' + ' ' + final_rate;
+                    }
+                        
+                </script>
+                    
+                    <button type="button" id="discounted-fare-btn" class="btn" onclick="check_discount()" value=".2">Discounted Fare</button>
+            </div>
+            <div class="col text-center">
+                <div id="result">
+                    <h1 id="Leaving">Your Ticket Rate:</h1>
+                    <!---display for the functions go here-->
                 </div>
             </div>
-
-
         </div>
-        <div id="Rate">
-            <h1>Your Ticket Rate: </h1>
-            <!---display for the funcitons go here-->
-
-        </div>
-    
     </div>
-
-    
-
 </body>
 </html>
