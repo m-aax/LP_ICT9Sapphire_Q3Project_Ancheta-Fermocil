@@ -175,10 +175,12 @@
                 
                         if (add1 == "none" || add2 == "none") {
                             alert("Please select a station");
+                            return;
                         }
 
                         if (add1 == add2) {
-                            alert("Please select different stations");
+                            document.getElementById('result').innerHTML= 'Your Ticket Rate: NaN';
+                            return;
                         }
 
                     var tofrom = Number(add1) + Number(add2);
@@ -199,11 +201,13 @@
 
                         if (from1 == "none" || to1 == "none") {
                             alert("Please select a station");
+                            return;
                         }
 
                         if (from1 == to1) {
-                            alert("Please select different stations");
-                        }
+                            document.getElementById('result').innerHTML= 'Your Ticket Rate: NaN';
+                            return;
+                        } 
 
                     var fromto = Number(from1) + Number(to1);
                     var final_rate = fromto - (disc2* fromto);    
