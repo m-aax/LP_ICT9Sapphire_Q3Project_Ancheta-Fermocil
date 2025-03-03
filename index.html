@@ -22,6 +22,7 @@
             padding: 5px;
             width: 50%;
             margin: 50px auto;
+            border-radius: 5px;
         }
 
         .space-left {
@@ -48,6 +49,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: 5px;
         }
 
         .form-control.custom-select {
@@ -173,12 +175,12 @@
                     var add2 = document.getElementById("to").value;
                     var disc2 = document.getElementById("regular-fare-btn").value;
                 
-                        if (add1 == "none" || add2 == "none") {
-                            alert("Please select a station");
+                        if (add1 == "none" || add2 == "none") { 
+                            alert("Please select a station"); document.getElementById('result').innerHTML= 'Your Ticket Rate: NaN';
                             return;
                         }
 
-                        if (add1 == add2) {
+                        if (add1 == add2) { alert("Please select a different station");
                             document.getElementById('result').innerHTML= 'Your Ticket Rate: NaN';
                             return;
                         }
@@ -200,11 +202,12 @@
                     disc2 = document.getElementById("discounted-fare-btn").value;
 
                         if (from1 == "none" || to1 == "none") {
-                            alert("Please select a station");
+                            alert("Please select a station"); document.getElementById('result').innerHTML= 'Your Ticket Rate: NaN';
                             return;
                         }
 
-                        if (from1 == to1) {
+                        if (from1 == to1) { 
+                            alert("Please select a different station");
                             document.getElementById('result').innerHTML= 'Your Ticket Rate: NaN';
                             return;
                         } 
